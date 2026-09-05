@@ -10,8 +10,7 @@ WORKDIR /app
 COPY package.json /app/package.json
 RUN npm install --omit=dev
 
-COPY bot.js /app/bot.js
-COPY config/default.yaml /config/default.yaml
+COPY src/ /app/src/
 COPY run.sh /run.sh
 
 ENV NODE_ENV=production
