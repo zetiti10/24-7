@@ -4,6 +4,6 @@ set -e
 
 echo "Démarrage de Mineflayer..."
 
-cd /app
+cd /app/src/
 
 exec node bot.js
