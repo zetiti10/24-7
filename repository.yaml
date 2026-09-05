@@ -1,4 +1,4 @@
 # https://developers.home-assistant.io/docs/apps/repository#repository-configuration
-name: Example Home Assistant app repository
-url: 'https://github.com/home-assistant/apps-example'
-maintainer: Awesome Maintainer <awesome@example.com>
+name: Home Assistant 24-7 app repository
+url: 'https://github.com/zetiti10/24-7'
+maintainer: Louis Léculier <louis@leculier.com>

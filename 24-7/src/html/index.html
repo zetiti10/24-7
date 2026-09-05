@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24-7</title>
+</head>
+
+<body>
+    <h1>24-7</h1>
+    <div id="botCommandsList">
+
+    </div>
+    <!-- TODO : générer automatiquement -->
+</body>
+
+<script>
+    async function callEndpoint(command) {
+        await fetch(command);
+    }
+
+    async function sendCommand(username) {
+        const content = document.getElementById(`content${username}`).value;
+
+        const response = await fetch(`/api/bot/${username}/command`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                content: content
+            })
+        });
+
+        const result = await response.json();
+        console.log(result);
+    }
+
+    // Get bots at page loading
+    async function loadPage() {
+        const response = await fetch('/api/bots');
+        const botList = await response.json()
+        let bloc = document.getElementById("botCommandsList")
+        for (let i = 0; i < botList.length; i++) {
+            let content = `
+                <button onclick="callEndpoint('/api/bot/${botList[i]}/activate')">Activer</button>
+                <button onclick="callEndpoint('/api/bot/${botList[i]}/desactivate')">Désactiver</button>
+                <textarea id="content${botList[i]}"></textarea>
+                <button onclick="sendCommand('${botList[i]}')">Envoyer</button>
+            `
+            let newDiv = document.createElement("div")
+            newDiv.innerHTML = content
+            bloc.appendChild(newDiv)
+        }
+    }
+
+    loadPage()
+</script>
+
+</html>

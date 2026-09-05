@@ -1,0 +1,21 @@
+name: "24-7"
+version: "1.0.0"
+slug: "24-7"
+description: "A Minecraft bot system focused on AFK"
+arch:
+  - amd64
+  - aarch64
+
+startup: application
+boot: auto
+init: false
+
+map:
+  - addon_config:rw
+
+ports:
+  3000/tcp: 3000
+ports_description:
+  "8888/tcp": "24-7 web control interface"
+
+backup: hot

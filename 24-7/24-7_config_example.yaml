@@ -1,0 +1,13 @@
+servers:
+  myserver:
+    host: my.server.com
+    port: 25565
+    version: "26.1"
+accounts:
+  myplayerxx2:
+    password: MyPassword23
+    activated: false
+    server: myserver
+authorisations:
+  - xxAdminww
+  - Steve023
