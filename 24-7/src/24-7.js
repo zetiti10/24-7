@@ -2,6 +2,8 @@ const bot = require("./bot.js")
 const configuration = require("./configuration.js")
 const api = require("./api.js")
 
+console.log("Starting...")
+
 let botList = []
 const botNames = configuration.getBots()
 for (let i = 0; i < botNames.length; i++) {
