@@ -6,4 +6,4 @@ echo "Démarrage de Mineflayer..."
 
 cd /app/src/
 
-exec node bot.js
+exec node 24-7.js
