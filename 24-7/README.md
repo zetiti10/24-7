@@ -8,4 +8,4 @@ It features:
 - a web interface to enable and disable bots, and to control it
 - a control by /msg system with a list of allowed players in the config
 
-- Warning: this app is in beta and future development isn't planned!
+Warning: this app is in beta and future development isn't planned!
