@@ -6,8 +6,6 @@ arch:
   - amd64
   - aarch64
 
-startup: application
-boot: auto
 init: false
 
 map:
@@ -17,5 +15,3 @@ ports:
   3000/tcp: 3000
 ports_description:
   "8888/tcp": "24-7 web control interface"
-
-backup: hot
